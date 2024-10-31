@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    /*background: #ff0000;*/
+    background: #F20505;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 45px;
+}
+
+.login-btn i {
+    margin-right: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.menu .half-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 48%;
+    cursor: pointer;
+}
+
+.menu .half-btn i {
+    margin-right: 5px;
+}
+
+.menu .half-btn:hover {
+    background: #e0e0e0;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-right: 40px;
+}

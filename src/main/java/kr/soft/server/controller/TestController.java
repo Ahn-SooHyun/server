@@ -3,6 +3,9 @@ package kr.soft.server.controller;
 import kr.soft.server.dto.member.MemberJoinReq;
 import kr.soft.server.dto.member.MemberJoinRes;
 import kr.soft.server.service.member.MemberService;
+import kr.soft.server.service.member.MemberServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/test")
+@Controller
+//@RequestMapping("/api/test")
 public class TestController {
+
+    Logger logger  = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
     MemberService memberService;
@@ -42,7 +47,7 @@ public class TestController {
     }
 
     //name <= method 필드명으로 갖고 오면 됨.
-    //http://localhost:8080/api/test/param?name=bbb
+    //http://localhost:8080/api/test/param?name=bbb7
     @GetMapping("/param")
     public void param(MemberJoinReq memberJoinReq) {
         System.out.println(memberJoinReq.getName());
@@ -58,4 +63,13 @@ public class TestController {
         String nam = memberJoinRes.getName();
         System.out.println(nam);
     }
+
+    @GetMapping("/test")
+    public String test1() {
+
+        logger.info("test");
+        return "test";
+    }
+
+
 }

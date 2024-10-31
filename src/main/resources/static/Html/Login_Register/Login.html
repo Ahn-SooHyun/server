@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>로그인</title>
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../../CSS/Login_Register/Login.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>로그인</h1>
+                <div class="input-group">
+                    <label for="User_ID">아이디(필수)</label>
+                    <input type="text" id="User_ID" name="User_ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="User_Password">비밀번호(필수)</label>
+                    <input type="password" id="User_Password" name="User_Password" required>
+                </div>
+                <button type="submit" class="login-btn" onclick="Login_Button()"><i class="fas fa-sign-in-alt"></i> 로그인</button>
+                <div class="checkbox-group">
+                    <label for="ID_Save">
+                        <input type="checkbox" id="ID_Save" name="ID_Save"> ID 저장
+                    </label>
+                    <label for="Auto_Login">
+                        <input type="checkbox" id="Auto_Login" name="Auto_Login"> 자동 로그인
+                    </label>
+                </div>
+
+            <div class="menu">
+                <button class="half-btn"><i class="fas fa-user-circle"></i> 회원정보찾기</button>
+                <button class="half-btn"><i class="fas fa-user-plus"></i> 회원 가입</button>
+            </div>
+        </div>
+
+        <!-- JS Part -->
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script type="text/javascript" src="../../JS/Public/IP.js"></script>
+        <script type="text/javascript" src="../../JS/Login_Register/Login.js"></script>
+    </body>
+</html>

@@ -5,6 +5,7 @@ import kr.soft.server.dto.member.MemberJoinReq;
 import kr.soft.server.dto.member.MemberJoinRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,10 +23,11 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public List<MemberJoinRes> valueCheck() {
-        return memberDao.valueCheck();
+            return memberDao.valueCheck();
     }
 
     @Override
+    @Transactional
     public int regist(MemberJoinReq memberJoinReq) {
         return memberDao.regist(memberJoinReq);
     }
